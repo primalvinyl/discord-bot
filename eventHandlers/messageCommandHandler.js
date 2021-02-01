@@ -2,8 +2,10 @@ module.exports = message => {
     // define instruction prefix
     const prefix = "!";
 
-    // if not a command, ignore
+    // if a bot, ignore
     if (message.author.bot) return;
+
+    // if not a command, ignore
     if (!message.content.startsWith(prefix)) return;
 
     // get command
